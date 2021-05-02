@@ -25,6 +25,7 @@ SECRET_KEY = '54)y+eao77-8osbdyvxod$j_4^*85w8w%0!2$vym1b@4xbn+4%'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
+
 ALLOWED_HOSTS = []
 
 
@@ -77,8 +78,12 @@ WSGI_APPLICATION = 'portfolio.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'portfoliodb',
+        'USER': 'postgres',
+        'PASSWORD': '#Dhiraj40',
+        'HOST' : 'localhost',
+        'PORT' : '5432',
     }
 }
 
